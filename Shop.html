@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AffinityStore | Shop</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+
+  <header>
+    <img src="../Images/logo.png" alt="AffinityStore Logo" class="logo" />
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="#">Cart</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero small-hero">
+    <h2>Shop All Products</h2>
+    <p>Browse our latest deals and daily essentials</p>
+  </section>
+
+  <!-- 🧠 Filters -->
+  <section class="shop-controls">
+    <input type="text" id="searchInput" placeholder="Search products..." onkeyup="filterProducts()" />
+
+    <select id="categoryFilter" onchange="filterProducts()">
+      <option value="all">All Categories</option>
+      <option value="Grocery">Grocery</option>
+      <option value="Personal Care">Personal Care</option>
+      <option value="Household">Household</option>
+      <option value="Toys">Toys</option>
+    </select>
+
+    <select id="sortFilter" onchange="filterProducts()">
+      <option value="default">Sort by</option>
+      <option value="low">Price: Low to High</option>
+      <option value="high">Price: High to Low</option>
+    </select>
+  </section>
+
+  <!-- 🛒 Product Grid -->
+  <section class="products">
+    <h3>All Products</h3>
+    <div class="product-grid" id="productGrid">
+
+      <div class="product-card" data-category="Grocery" data-price="399">
+        <img src="../Images/product1.jpg" alt="Product 1" />
+        <h4>Premium Rice (5kg)</h4>
+        <p>₹399</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="Grocery" data-price="149">
+        <img src="../Images/product2.jpg" alt="Product 2" />
+        <h4>Sunflower Oil (1L)</h4>
+        <p>₹149</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="Personal Care" data-price="89">
+        <img src="../Images/product3.jpg" alt="Product 3" />
+        <h4>Herbal Toothpaste</h4>
+        <p>₹89</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="Household" data-price="199">
+        <img src="../Images/product4.jpg" alt="Product 4" />
+        <h4>Natural Soap Pack</h4>
+        <p>₹199</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card" data-category="Toys" data-price="299">
+        <img src="../Images/product5.jpg" alt="Product 5" />
+        <h4>DIY Toy Kit</h4>
+        <p>₹299</p>
+        <button>Add to Cart</button>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 AffinityStore. All rights reserved.</p>
+  </footer>
+
+  <script src="../app.js"></script>
+</body>
+</html>
